@@ -8,7 +8,6 @@ external-controller: 127.0.0.1:9090
 
 experimental:
   ignore-resolve-fail: true
-  interface-name: 
 
 
 dns:
@@ -29,27 +28,25 @@ dns:
     - 119.29.29.29
     - 223.5.5.5
   fallback:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
+    - https://dns.adguard.com/dns-query
     - https://dns.rubyfish.cn/dns-query
+    - https://cloudflare-dns.com/dns-query
   fallback-filter:
     geoip: true
     ipcidr:
       - 240.0.0.0/4
 
 
-Proxy: []
+proxies: []
 
 
-Proxy Group:
+proxy-groups:
   - name: "Global"
     type: select
     proxies:
       - Proxy1
       - Proxy2
       - Proxy3
-      - Proxy4
-      - Proxy5
       - DIRECT
   - name: "Domestic"
     type: select
@@ -70,8 +67,6 @@ Proxy Group:
       - Proxy1
       - Proxy2
       - Proxy3
-      - Proxy4
-      - Proxy5
   - name: "Apple_CDN"
     type: select
     proxies:
@@ -85,8 +80,6 @@ Proxy Group:
       - Proxy1
       - Proxy2
       - Proxy3
-      - Proxy4
-      - Proxy5
   - name: "GlobalMedia"
     type: select
     proxies:
@@ -95,8 +88,6 @@ Proxy Group:
       - Proxy1
       - Proxy2
       - Proxy3
-      - Proxy4
-      - Proxy5
   - name: "Proxy1"
     type: select
     proxies:
@@ -109,18 +100,10 @@ Proxy Group:
     type: select
     proxies:
       - 移除这个
-  - name: "Proxy4"
-    type: select
-    proxies:
-      - 移除这个
-  - name: "Proxy5"
-    type: select
-    proxies:
-      - 移除这个
 
 
 
-Rule:
+rules:
   - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,AdBlock
 
   - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Apple_CDN.list,Apple_CDN
@@ -131,6 +114,7 @@ Rule:
 
   - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Domestic.list,Domestic
   - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Global.list,Global
-  - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Region.list,Domestic
+  
+  - GEOIP,CN,Domestic
 
   - MATCH,Global

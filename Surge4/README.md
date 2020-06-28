@@ -11,7 +11,7 @@ Maintained by <b>eHpo</b>
 
 1. 开启Surge配置同步 - iCloud同步
 
-2. 通过iOS [快捷指令](https://www.icloud.com/shortcuts/6130b2e96e2c4b4280f1015ca47dd724) 转换托管链接（筛选4个名称关键词），生成的六个文件全部保存在iCloud的Surge目录下。
+2. 通过iOS [快捷指令](https://www.icloud.com/shortcuts/9042a9dd0a3348fa93b6e382959f1ae8) 转换托管链接（筛选2个名称关键词），生成的4个文件全部保存在iCloud的Surge目录下。
 
 	> ![Surge快捷指令](/.image/surgekjzl.jpg)
 
@@ -25,7 +25,7 @@ Maintained by <b>eHpo</b>
 
 ### Liby.list
 
-通过域名 / IP去广告
+通过域名、IP去广告
 
 ```
 https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list
@@ -39,13 +39,13 @@ https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list
 https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list
 ```
 
-### /Sub
+### Sub/
 
 分站细化规则
 
 <https://github.com/eHpo1/Rules/tree/master/Surge4/Ruleset/Sub>
 
-### Apple_CDN.list / Apple_API.list
+### Apple_CDN.list、Apple_API.list
 
 > [苹果服务的连接策略推荐](https://blog.dada.li/2019/better-proxy-rules-for-apple-services) @geekdada
 
@@ -63,31 +63,32 @@ API 服务类  推荐选择账号所在区
 https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Apple_API.list
 ```
 
-### AsianMedia.list / GlobalMedia.list
+### AsianMedia.list、GlobalMedia.list
 
-亚洲媒体 / 国际媒体
+亚洲媒体、国际媒体
 
 ```
 https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/AsianMedia.list
 https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/GlobalMedia.list
 ```
 
-### Domestic.list / Global.list
+### Domestic.list、Global.list
 
-国内 / 国际常用网页
+国内、国际常用网页
 
 ```
 https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Domestic.list
 https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Global.list
 ```
 
-### Region.list
+### ChinaMedia.list
 
-用于修正规则，包含 LAN / GeoIP,CN
+回国专用list，回国规则暂无模板，只有一个面向大陆媒体的list
 
 ```
-https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Region.list
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/ChinaMedia.list
 ```
+
 ---
 
 <h3 align="center">
